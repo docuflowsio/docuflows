@@ -1,0 +1,10 @@
+[package]
+name = "docuflows"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.4.6", features = ["derive"] }
+tree-sitter = "0.24"
+tree-sitter-rust = "0.23"
+walkdir = "2.4"
