@@ -1,6 +1,5 @@
 mod parser;
 mod flow_reader;
-
 mod mermaid;
 
 use clap::{Arg, Command};
@@ -12,15 +11,19 @@ fn main() {
         .about("Visualize feature flows in codebases with Docuflows")
         .subcommand(
             Command::new("diagram")
-                .about("Generate a Mermaid.js diagram from a .treeflow file")
+                .short_flag('d')
+                .long_flag("diagram")
+                .about("Generate a Mermaid.js diagram from a .docuflow file")
                 .arg(
                     Arg::new("flow")
-                        .help("Name of the .treeflow file (without extension)")
+                        .help("Name of the .docuflow file (without extension)")
                         .required(true),
                 ),
         )
         .subcommand(
             Command::new("parse")
+                .short_flag('p')
+                .long_flag("parse")
                 .about("Parse source directory and list all function names")
                 .arg(
                     Arg::new("path")
