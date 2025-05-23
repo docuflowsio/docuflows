@@ -83,16 +83,18 @@ Each `.docuflow` file is an **ordered list of fully‑qualified function signatu
 Run `docuflows --help` for the full command list.
 
 ```
-docuflows 0.1.0
-A zero‑config code‑flow visualizer
+Visualize feature flows in codebases with Docuflows
 
-USAGE:
-    docuflows <SUBCOMMAND>
+Usage: docuflows [COMMAND]
 
-SUBCOMMANDS:
-    parse      Generate flows from a directory
-    diagram    Export a flow in Mermaid.js format
-    help       Print this message
+Commands:
+  diagram, -d, --diagram  Generate a Mermaid.js diagram from a .docuflow file
+  parse, -p, --parse      Parse source directory and list all function names
+  help                    Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
 ```
 
 > Built with ❤️ & 🦀 by [Docuflows](https://twitter.com/docuflowsio).
